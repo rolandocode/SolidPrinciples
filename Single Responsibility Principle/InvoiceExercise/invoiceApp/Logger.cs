@@ -1,4 +1,5 @@
-﻿using System;
+﻿using invoiceApp.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace invoiceApp
 {
-	public class Logger
+	public class Logger : ILogger
 	{
-		public Logger()
+		public Logger() 
 		{
 		}
 
 		public void Info(string info)
 		{
-			// here we need to write the Code for info information into the ErrorLog text file
+			Console.Write(info);
 		}
 		public void Debug(string info)
 		{
