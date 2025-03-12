@@ -4,15 +4,13 @@ using invoiceApp.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
 Console.WriteLine("Hello, World!");
-
-
 var services = new ServiceCollection();
 
 services.AddSingleton<ILogger, Logger>();
 services.AddSingleton<IInvoiceManager, InvoiceManager>();
+services.AddSingleton<IInvoice, Invoice>();
 
 var serviceProvider = services.BuildServiceProvider();
-
 var instance = serviceProvider.GetService<IInvoiceManager>();
 
 instance.RunInvoice();

@@ -23,7 +23,9 @@ namespace invoiceApp
 		}
 		public void Error(string message, Exception ex)
 		{
-			// here we need to write the Code for Error information into the ErrorLog text file
+			// here we need to write the Code for Error
+			Console.Write("ERROR!!!!!!!!!!: " + message + " -> tech details: " + ex.Message);
+
 		}
 	}
 }
