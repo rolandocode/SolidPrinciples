@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace InvoiceApp2.Interfaces
 {
-	public interface IInvoice
+	public interface IProposedInvoice : IInvoice
 	{
-		double GetInvoiceDiscount(double amount/*, InvoiceType invoiceType*/);
 	}
 }

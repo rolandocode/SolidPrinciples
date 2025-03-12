@@ -9,19 +9,21 @@ namespace InvoiceApp2
 {
 	public class Invoice : IInvoice
 	{
-		public double GetInvoiceDiscount(double amount, InvoiceType invoiceType)
+		public virtual double GetInvoiceDiscount(double amount/*, InvoiceType invoiceType*/)
 		{
-			double finalAmount = 0;
-			if (invoiceType == InvoiceType.FinalInvoice)
-			{
-				finalAmount = amount - 100;
-			}
-			else if (invoiceType == InvoiceType.ProposedInvoice)
-			{
-				finalAmount = amount - 50;
-			}
+			return amount;
 
-			return finalAmount;
+			//double finalAmount = 0;
+			//if (invoiceType == InvoiceType.FinalInvoice)
+			//{
+			//	finalAmount = amount - 100;
+			//}
+			//else if (invoiceType == InvoiceType.ProposedInvoice)
+			//{
+			//	finalAmount = amount - 50;
+			//}
+
+			//return finalAmount;
 		}
 	}
 

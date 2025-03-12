@@ -8,6 +8,9 @@ Console.WriteLine("Hello, World!");
 var services = new ServiceCollection();
 services.AddSingleton<IInvoiceManager, InvoiceManager>();
 services.AddSingleton<IInvoice, Invoice>();
+services.AddSingleton<IFinalInvoice, FinalInvoice>();
+services.AddSingleton<IRecurringInvoice, RecurringInvoice>();
+services.AddSingleton<IProposedInvoice, ProposedInvoice>();
 
 var serviceProvider = services.BuildServiceProvider();
 var runnerInstance = serviceProvider.GetService<IInvoiceManager>();
